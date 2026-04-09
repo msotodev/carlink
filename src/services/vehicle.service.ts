@@ -4,7 +4,7 @@ import sideJPEG from "../assets/italika-l25-z-side.jpeg";
 import leftSkew from "../assets/italika-l25-z-left-skew.jpeg";
 import leftFrontSkew from "../assets/italika-l25-z-left-front-skew.jpeg";
 import up from "../assets/italika-l25-z-up.jpeg";
-import sideFrontPNG from "../assets/italika-l25-z-side-front.PNG";
+import sideFrontPNG from "../assets/italika-l25-z-side-front.png";
 
 const vehicle: Vehicle = {
     category: 'Motocicleta',
