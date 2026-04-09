@@ -55,10 +55,10 @@ export function CarDetails(
             </div>
 
             <div className="flex flex-col gap-3 sm:flex-row">
-                <a href={vehicle.cta.whatsapp} target="_blank" rel="noopener noreferrer" className="rounded-full bg-amber-600 px-6 py-4 text-sm font-semibold uppercase tracking-[0.22em] text-white transition duration-300 hover:scale-[1.02] hover:bg-orange-500">
+                <a href={vehicle.cta.whatsapp} target="_blank" rel="noopener noreferrer" className="truncate rounded-full bg-amber-600 px-6 py-4 text-sm font-semibold uppercase tracking-[0.22em] text-white transition duration-300 hover:scale-[1.02] hover:bg-orange-500">
                     Solicitar información
                 </a>
-                <a href={vehicle.cta.testDrive} target="_blank" rel="noopener noreferrer" className="rounded-full border border-white/15 bg-white/5 px-6 py-4 text-sm font-semibold uppercase tracking-[0.22em] text-white transition duration-300 hover:border-brass hover:bg-white/10">
+                <a href={vehicle.cta.testDrive} target="_blank" rel="noopener noreferrer" className="truncate rounded-full border border-white/15 bg-white/5 px-6 py-4 text-sm font-semibold uppercase tracking-[0.22em] text-white transition duration-300 hover:border-brass hover:bg-white/10">
                     Agendar visita
                 </a>
             </div>
