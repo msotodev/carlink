@@ -13,7 +13,7 @@ export function CarProfile(
                 <img
                     src={vehicle.photos[0]}
                     alt={vehicle.title}
-                    className="drop-shadow-[0_20px_40px_rgba(0,0,0,0.7)] mx-auto h-full w-full object-cover transition duration-700 hover:scale-105 text"
+                    className="drop-shadow-[0_20px_40px_rgba(0,0,0,0.7)] mx-auto h-full w-full object-contain transition duration-700 hover:scale-105 text"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-slate-950 via-slate-950/35 to-transparent" />
 
@@ -31,10 +31,13 @@ export function CarProfile(
                         <p className="mb-3 text-sm uppercase tracking-[0.35em] text-brass">
                             {vehicle.category}
                         </p>
-                        <h1 className="text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
+                        <h1 className="text-2xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
                             {vehicle.title}
                         </h1>
-                        <p className="mt-4 max-w-xl text-sm leading-7 text-slate-200 sm:text-base">
+                        <p className="mt-4 max-w-xl text-md leading-7 text-slate-200 sm:text-base">
+                            {vehicle.subtitle}
+                        </p>
+                        <p className="mt-4 max-w-xl text-sm leading-7 text-slate-200 hidden sm:block sm:text-base">
                             {vehicle.tagline}
                         </p>
                     </div>
