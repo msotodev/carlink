@@ -2,10 +2,11 @@ import type { Vehicle } from "../types/vehicle.type";
 
 export interface GalleryProps {
     vehicle: Vehicle;
+    onPhotoClick: (photoUrl: string) => void;
 }
 
 export default function Gallery(
-    { vehicle }: GalleryProps
+    { vehicle, onPhotoClick }: GalleryProps
 ) {
     return (
         <article className="animate-rise rounded-4xl border border-white/10 bg-white/5 p-5 backdrop-blur [animation-delay:120ms] sm:p-6">
@@ -23,7 +24,8 @@ export default function Gallery(
                 {vehicle.photos.slice(1).map((photo, index) => (
                     <div
                         key={photo}
-                        className="group relative overflow-hidden rounded-3xl border border-white/10"
+                        className="group relative overflow-hidden rounded-3xl border border-white/10 cursor-pointer transition duration-300 hover:scale-[1.02]"
+                        onClick={() => onPhotoClick(photo)}
                     >
                         <img
                             src={photo}

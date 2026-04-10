@@ -1,6 +1,7 @@
 export interface Vehicle {
     category: string;
     title: string;
+    subtitle: string;
     tagline: string;
     price: string;
     color: string;

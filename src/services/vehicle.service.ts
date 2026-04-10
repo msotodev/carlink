@@ -8,9 +8,9 @@ import sideFrontPNG from "../assets/italika-l25-z-side-front-skew.png";
 
 const vehicle: Vehicle = {
     category: 'Motocicleta',
-    title: 'Italika 125Z - La moto deportiva y confiable para la ciudad',
-    tagline:
-        'Si buscas una moto confiable, económica y con un diseño deportivo que no pasa desapercibido, esta Italika 125Z es para ti. Perfecta para la ciudad, combina rendimiento, comodidad y estilo en un solo paquete.',
+    title: 'Italika 125Z',
+    subtitle: 'Moto confiable, económica y con diseño deportivo',
+    tagline: 'Si buscas una moto confiable, económica y con un diseño deportivo que no pasa desapercibido, esta Italika 125Z es para ti. Perfecta para la ciudad, combina rendimiento, comodidad y estilo en un solo paquete.',
     price: '$30,000 MXN',
     color: 'Negro con detalles en rojo',
     monthly: 'Precio a tratar',

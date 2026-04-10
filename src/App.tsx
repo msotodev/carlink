@@ -1,12 +1,26 @@
 import './App.css'
 import { CarDetails } from './components/CarDetails';
+import CarouselModal from './components/CarouselModal';
 import { CarProfile } from './components/CarProfile';
 import Gallery from './components/Gallery';
 import { TechnicalSpecifications } from './components/TechnicalSpecifications'
 import useVehicle from './services/vehicle.service';
+import { useState } from 'react';
 
 function App() {
-   const { vehicle, vehicleMetrics, vehicleSpecs } = useVehicle();
+  const { vehicle, vehicleMetrics, vehicleSpecs } = useVehicle();
+  const [selectedPhoto, setSelectedPhoto] = useState<string | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handlePhotoClick = (photoUrl: string) => {
+    setSelectedPhoto(photoUrl);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedPhoto(null);
+  };
 
   return (
     <>
@@ -27,9 +41,16 @@ function App() {
           </section>
 
           <section className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
-            <Gallery vehicle={vehicle} />
+            <Gallery vehicle={vehicle} onPhotoClick={handlePhotoClick} />
             <TechnicalSpecifications specs={vehicleSpecs} />
           </section>
+
+          {isModalOpen && selectedPhoto && (
+            <CarouselModal
+              photos={vehicle.photos}
+              onClose={closeModal}
+            />
+          )}
         </main>
       </div>
     </>
