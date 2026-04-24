@@ -4,6 +4,7 @@ export interface Vehicle {
     subtitle: string;
     tagline: string;
     price: string;
+    priceWithDiscount: string;
     color: string;
     monthly: string;
     location: string;

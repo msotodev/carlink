@@ -14,29 +14,31 @@ export function CarDetails(
                 <div className="flex items-start justify-between gap-4">
                     <div>
                         <p className="text-sm uppercase tracking-[0.3em] text-mist">
-                            Precio publicado
+                            Precio con oferta
                         </p>
-                        <h2 className="mt-2 text-4xl font-semibold text-brass sm:text-4xl">
-                            {vehicle.price}
-                        </h2>
+                        <div className="mt-2">
+                            <h4 className="text-2xl font-semibold text-brass sm:text-2xl line-through text-gray-400">{vehicle.price}</h4>
+                            <h2 className="text-4xl font-semibold text-brass sm:text-4xl">
+                                {vehicle.priceWithDiscount}
+                            </h2>
+                        </div>
                         <p className="mt-2 text-sm text-slate-300">{vehicle.monthly}</p>
                     </div>
+                </div>
+                <div className="grid grid-cols-2 gap-3">
                     <div className="animate-float rounded-3xl border border-white/10 bg-white/5 px-4 py-3 text-right">
                         <p className="text-xs uppercase tracking-[0.2em] text-slate-400 text-center">Ubicación</p>
-                        <p className="mt-2 text-sm font-medium text-white">{vehicle.location}</p>
+                        <p className="mt-2 text-sm font-medium text-white text-center">{vehicle.location}</p>
                     </div>
-                </div>
-
-                <div className="grid grid-cols-2 gap-3">
                     {vehicleMetrics.map((item) => (
                         <article
                             key={item.label}
                             className="rounded-2xl border border-white/10 bg-white/3 p-4 transition duration-300 hover:-translate-y-1 hover:border-ember/40 hover:bg-white/6"
                         >
-                            <p className="text-xs uppercase tracking-[0.2em] text-slate-400">
+                            <p className="text-xs uppercase tracking-[0.2em] text-slate-400 text-center">
                                 {item.label}
                             </p>
-                            <p className="mt-3 text-lg font-semibold text-white">{item.value}</p>
+                            <p className="mt-3 text-lg font-semibold text-white text-center">{item.value}</p>
                         </article>
                     ))}
                 </div>
@@ -69,8 +71,8 @@ export function CarDetails(
                         <span
                             key={index}
                             className={`rounded-sm ${[0, 1, 3, 5, 7, 10, 11, 14, 15, 17, 18, 20, 22, 24].includes(index)
-                                    ? 'bg-slate-950'
-                                    : 'bg-white'
+                                ? 'bg-slate-950'
+                                : 'bg-white'
                                 }`}
                         />
                     ))}
